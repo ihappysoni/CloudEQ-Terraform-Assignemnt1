@@ -1,5 +1,5 @@
 # CloudEQ-Terraform-Assignemnt1
-For Running ,go to the : ec2/example then terraform apply -auto-approve
+# For Running ,go to the : ec2/example then terraform apply -auto-approve
 This Code will create 3 Users named sachin-tendulkar,rohit-sharma, and mahendra-singh-dhoni and assign them in the group "cricketer"
 also there will be the optional user which will be only be created if we enter a boolean value , either "true" or "false" on run time ensuring the 
 optional nature of the resource.
