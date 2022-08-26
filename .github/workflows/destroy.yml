@@ -28,5 +28,5 @@ jobs:
         working-directory: "./ec2/example" 
 
       - name: Terraform Destroy
-        run: terraform destroy
+        run: terraform destroy -auto-approve
         working-directory: "./ec2/example"
