@@ -1,0 +1,28 @@
+name : Terraform with git actions
+
+env:
+  Messeage: "be Happy"
+
+
+on: 
+  workflow_dispatch:
+
+jobs:
+
+  terraform:
+    name: 'Resource Deletion'
+    runs-on: ubuntu-latest
+    env:
+        AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID}}
+        AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+        AWS_DEFAULT_REGION: us-east-1
+        AWS_SESSION_TOKEN: ${{ secrets.AWS_SESSION_TOKEN }}
+
+    steps:
+
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Terraform Destroy
+        run: terraform destroy
+        working-directory: "./ec2/example"
