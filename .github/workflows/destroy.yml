@@ -23,6 +23,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Terraform Init
+        run: terraform init
+        working-directory: "./ec2/example" 
+
       - name: Terraform Destroy
         run: terraform destroy
         working-directory: "./ec2/example"
